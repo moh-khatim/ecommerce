@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from product import models
+
+admin.site.register(models.Brand)
+admin.site.register(models.Category)
+admin.site.register(models.Product)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
 ]
