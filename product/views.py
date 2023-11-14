@@ -44,3 +44,18 @@ class ProductViewSet(viewsets.ViewSet):
         serializer = serializers.ProductSerializer(self.queryset, many=True)
         return Response(serializer.data)
 
+
+
+class ProductLineViewSet(viewsets.ViewSet):
+    """
+    A simple view set for viewing all product line
+    """
+    
+    queryset = models.ProductLine.objects.all()
+
+    @extend_schema(responses=serializers.ProductLineSerializer)
+    def list(self, request):
+        serializer = serializers.ProductLineSerializer(self.queryset, many=True)
+        return Response(serializer.data)
+
+
