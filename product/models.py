@@ -1,8 +1,6 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 
-# Create your models here.
-
 
 class Category(MPTTModel):
     name = models.CharField(max_length=100)

@@ -1,8 +1,8 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import viewsets
 from rest_framework.response import Response
-from product import models
-from drf_spectacular.utils import extend_schema
-from product import serializers
+
+from product import models, serializers
 
 
 class CategoryViewSet(viewsets.ViewSet):
